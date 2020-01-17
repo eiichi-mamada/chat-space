@@ -1,14 +1,15 @@
 .side-bar
   .header
     .name_view
-      %p.name_view__name eiichi
+      %p.name_view__name
+        = current_user.name
       %ul.name_view__icons
         %li.name_view__icons__icon
           =link_to "#", class: "name-view--icon edit" do
             = icon('fas', 'edit',  class: "edit")
             %span<>
         %li.name_view__icons__icon
-          =link_to "#", class: "name-view--icon cog" do
+          =link_to edit_user_path(current_user), class: "name-view--icon cog" do
             = icon('fas', 'cog',  class: "cog")
             %span<>
             
