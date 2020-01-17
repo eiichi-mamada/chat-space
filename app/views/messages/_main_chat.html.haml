@@ -1,0 +1,32 @@
+.main
+  .header
+    .group
+      .group--group_name group_name
+      %ul.group--menber_list Menber :
+      %li.group--list eiichi
+      %li.group--list kouchi
+
+    .edit_btn
+      =link_to "#" , class:"edit_btn--edit" do
+        %p Edit
+  .view
+    .messages
+      .messages__info
+        %p.messages__info--name eiichi
+        %p.messages__info--time 2020/01/15[Wed] 17:00:00
+      %p.messages--text おはよう！！！！！！
+    
+    .messages
+      .messages__info
+        %p.messages__info--name eiichi
+        %p.messages__info--time 2020/01/15[Wed] 17:00:00
+      %p.messages--text 今日も夜から雨！！！！！！
+
+  .message
+    %form.message_form
+      .input
+        %input{type: "text", class: "input__text",placeholder: "type a message"}
+        %label{class: "input__image"}
+          = icon('fas', 'image')
+          %input{type: "file", class:"input__image__file"}
+      %input{type: "submit", class: "submit-btn"}
