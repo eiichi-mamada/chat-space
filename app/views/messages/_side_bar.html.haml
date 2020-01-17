@@ -1,0 +1,19 @@
+.side-bar
+  .header
+    .name_view
+      %p.name_view__name eiichi
+      %ul.name_view__icons
+        %li.name_view__icons__icon
+          =link_to "#", class: "name-view--icon edit" do
+            = icon('fas', 'edit',  class: "edit")
+            %span<>
+        %li.name_view__icons__icon
+          =link_to "#", class: "name-view--icon cog" do
+            = icon('fas', 'cog',  class: "cog")
+            %span<>
+            
+
+  .histries
+    .histries__histry
+      .histries__histry__name techcamp
+      .histries__histry__message まだメッセージがありません
