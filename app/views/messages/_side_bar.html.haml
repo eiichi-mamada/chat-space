@@ -5,16 +5,20 @@
         = current_user.name
       %ul.name_view__icons
         %li.name_view__icons__icon
-          =link_to "#", class: "name-view--icon edit" do
+          =link_to new_group_path, class: "name-view--icon edit" do
             = icon('fas', 'edit',  class: "edit")
             %span<>
         %li.name_view__icons__icon
           =link_to edit_user_path(current_user), class: "name-view--icon cog" do
             = icon('fas', 'cog',  class: "cog")
             %span<>
-            
 
-  .histries
-    .histries__histry
-      .histries__histry__name techcamp
-      .histries__histry__message まだメッセージがありません
+  .groups  
+    - current_user.groups.each do |group|
+      .groups__group
+        = link_to '/groups/1/edit', class: "groups__group" do
+          %p.groups__group__name
+            = group.name
+          %p.groups__group__message
+            まだメッセージがありません
+    
