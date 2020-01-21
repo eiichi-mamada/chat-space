@@ -65,7 +65,7 @@ $blackfont:#333333;
       background-color: #fafafa;
       height:calc(100vh - 190px);
       padding: 35px 40px;
-      .messages{
+      .message{
         &__info{
           margin-bottom:12px;
           display:flex;
@@ -79,57 +79,59 @@ $blackfont:#333333;
             margin-left:10px
           }
         }
-      &--text{
-        margin-bottom:46px;
-        font-size:14px;
-        color:#434A54;
-      }
-      }
-    }
-    .message{
-      background-color: #d2d2d2;
-      height: 90px;
-      bottom: 0;
-      display: flex;
-      align-items: center;
-      form{
-        width:100%;
-        display:flex;
-        justify-content: flex-end;
-        height:50px;
-        margin:20px 40px;
-        .input{
-          display:flex;
-          width:100%;
-          position:relative;
-          line-height: 50px;
-          text-align: center;
-          &__text{
-            width:100%;
-            padding-left:10px;
-            padding-right:40px;
+        &__contents{
+          margin-bottom:46px;
+          &--text{
+            font-size:14px;
+            color:#434A54;
           }
-          &__image{
-            position: absolute;
-            width: 40px;
-            right:10px;
-            cursor: pointer;
-            &__file{
-                display:none;
-            }
-          }
-        }
-        .submit-btn{
-          background-color: $btn;
-          width:100px;
-          height:50px;
-          color:$whitefont;
-          margin-left:15px;
-          cursor: pointer;
+
         }
       }
     }
   }
+  .form_message{
+    background-color: #d2d2d2;
+    height: 90px;
+    bottom: 0;
+    .new_message{
+      padding:20px 40px;
+      display:flex;
+      justify-content: flex-end;
+      .input__text{
+        width:100%;
+        padding-left:10px;
+        padding-right:40px;
+        display:flex;
+        position:relative;
+      }
+      .form_mask{
+        position: absolute;
+        height:50px;
+        width:40px;
+        text-align: center;
+        right:140px;
+        .icon{
+          width:40px;
+          height:50px;
+          line-height: 50px;
+          cursor: pointer;
+        }
+        .hidden{
+          display:none;
+        }
+      }
+    }
+    .submit-btn{
+      background-color: $btn;
+      width:100px;
+      height:50px;
+      color:$whitefont;
+      margin-left:15px;
+      cursor: pointer;
+    }
+  }
+
 
   .side-bar{
     background-color: $side-header;

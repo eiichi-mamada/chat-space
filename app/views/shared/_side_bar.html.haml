@@ -16,9 +16,9 @@
   .groups  
     - current_user.groups.each do |group|
       .groups__group
-        = link_to '/groups/1/edit', class: "groups__group" do
+        = link_to group_messages_path(group), class: "groups__group" do
           %p.groups__group__name
             = group.name
           %p.groups__group__message
-            まだメッセージがありません
+            = group.show_last_message
     
