@@ -7,4 +7,4 @@
   %p.message__content
     - if message.content.present?
       = message.content
-    = image_tag message.image.url, class: 'messages__message--image' if message.image.present?
+  = image_tag message.image.url, class: 'messages__message--image' if message.image.present?
