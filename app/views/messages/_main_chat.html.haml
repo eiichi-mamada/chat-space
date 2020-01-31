@@ -5,7 +5,7 @@
         = @group.name
       %ul.group--menber_list Menber :
       - @group.users.each do |user|
-        =link_to user_path(user) do        
+        =link_to user_path(user) do
           %li.group--list
             = user.name
         
